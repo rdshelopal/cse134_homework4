@@ -1,7 +1,15 @@
  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
  
-    :root{
+    :root{/*tron look for dark mode*/
         --accent-color: #00fff7;
+        --bgcolor:#0d0d0d
+    }
+
+    /*disney pixar sky for light mdode*/
+    [data-theme="light"] {
+        --bgcolor: #c3f4ff;  
+        --accent-color: rgb(93, 92, 92);
+        --border-color: #00b4ff;
     }
 
     *{
@@ -9,8 +17,8 @@
         box-sizing: border-box; /*when we change height and width, it will include the border instead of just content*/
         margin:0;/*we make padding and margin 0 b/c some elements already have predefined values*/
         padding:0;
-        background-color: #0d0d0d;
-        color: #00fff7;
+        background-color: var(--bgcolor);
+        color:var(--accent-color);
         
         
     }
@@ -61,10 +69,26 @@
     }
     button{
         border: none; /*might be better with border tho*/
-    
         
     }
     
+    #lightSwitch{
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        #theme-toggle{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin: 0rem 6rem;
+            font-size: 1rem;
+           
+            
+
+        }
+    }
+
     #contentblocks{
         display: flex;
         flex-direction: row;
